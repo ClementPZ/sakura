@@ -1,0 +1,17 @@
+<div class="title_container">
+  <div class="page_title">COLECCION FW 2017</div>
+</div>
+
+<section class="styles_container">
+  <% @styles.each do |style| %>
+    <div class="style" >
+      <%= link_to show_style_path(style) do %>
+        <div class="style_cover"><%= image_tag style.cover %></div>
+        <div class="style_name"><%= style.name %></div>
+      <% end %>
+    </div>
+  <% end %>
+</section>
+
+
+
