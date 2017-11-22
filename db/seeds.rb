@@ -10,233 +10,248 @@ puts 'Cleaning Styles database...'
 Style.destroy_all
 
 puts 'Creating Styles...'
-style_attributes = [
-  {
-    name:         "SAK X VENUS",
-    cover:        "1.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "2.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "3.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "4.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "5.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "6.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "7.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "8.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "9.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "10.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "11.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "12.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "13.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "14.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "15.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "16.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "17.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "18.jpg",
-    year:         "2017",
-  },
-  {
-    name:         "SAK X VENUS",
-    cover:        "19.jpg",
-    year:         "2017",
-  }
-]
 
-Style.create!(style_attributes)
+4.times do
+  id = 19
+  Style.create([{name: "SAK X VENUS", cover: "#{[1, 2, 3, 4].sample}.jpg", year: "2017"}])
+  id -= 1
+end
+
 puts 'db Styles created!'
 
 puts 'Cleaning photos database...'
 Photo.destroy_all
 
 puts 'Creating Photos...'
-Photos_attributes = [
-  {
-    style_id: "3",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  },
-  {
-    style_id: "1",
-    image: "1/1.jpg",
-    description: ""
-  }
-]
 
-Photo.create!(Photos_attributes)
+20.times do
+  Photo.create([{style_id: [1, 2, 3, 4].sample, description: "SAK X VENUS", image: "#{(1..3).to_a.sample}.jpg"}])
+end
+
+
+# Style.create!(style_attributes)
+# style_attributes = [
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "1.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "2.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "3.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "4.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "5.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "6.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "7.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "8.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "9.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "10.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "11.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "12.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "13.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "14.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "15.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "16.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "17.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "18.jpg",
+#     year:         "2017",
+#   },
+#   {
+#     name:         "SAK X VENUS",
+#     cover:        "19.jpg",
+#     year:         "2017",
+#   }
+# ]
+
+
+
+# Photos_attributes = [
+#   {
+#     style_id: "3",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   },
+#   {
+#     style_id: "1",
+#     image: "1/1.jpg",
+#     description: ""
+#   }
+# ]
+
+# Photo.create!(Photos_attributes)
 puts 'db photos created!'

@@ -4,7 +4,7 @@
   <%= image_tag photo.image %>
 <% end  %>
 
-<div class="container_styles">
+<div class="styles_container">
   <div class="styles" style="z-index: 1;">
     <% @photos.each do |photo| %>
       <%= link_to show_photo_path(photo) do %>
