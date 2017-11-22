@@ -11,7 +11,7 @@ Style.destroy_all
 
 puts 'Creating Styles...'
 
-4.times do
+19.times do
   id = 19
   Style.create([{name: "SAK X VENUS", cover: "#{[1, 2, 3, 4].sample}.jpg", year: "2017"}])
   id -= 1
@@ -24,9 +24,11 @@ Photo.destroy_all
 
 puts 'Creating Photos...'
 
-20.times do
+30.times do
   Photo.create([{style_id: [1, 2, 3, 4].sample, description: "SAK X VENUS", image: "#{(1..3).to_a.sample}.jpg"}])
 end
+
+puts 'db photos created!'
 
 
 # Style.create!(style_attributes)
@@ -254,4 +256,4 @@ end
 # ]
 
 # Photo.create!(Photos_attributes)
-puts 'db photos created!'
+

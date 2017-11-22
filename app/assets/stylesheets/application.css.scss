@@ -1,0 +1,38 @@
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+body {
+  color:            black;
+  font-family:      Futura;
+  font-weight:      bold;
+  text-transform:   uppercase;
+}
+
+a {
+  text-decoration:  none;
+  color:            black;
+  font-family:      Futura;
+  font-weight:      bold;
+  text-transform:   uppercase;
+  font-size:        15px;
+}
+
+// Page title
+h1 {
+  font-size: 36px;
+}
+
+// Petit logo Sakura
+h2 {
+  font-size: 20px;
+}
+
+// liens
+h3 {
+  font-size: 15px;
+}
+// description
+p {
+  font-size: 15px;
+}

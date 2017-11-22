@@ -1,0 +1,69 @@
+.container_landing {
+  height:           100vh;
+  width:            100%;
+  position:         fixed;
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  justify-content:  center;
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: futura;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  a:hover {
+    border-bottom: 2.5px solid black;
+  }
+  .sakura_glitch{
+    font-family: futura;
+    font-weight: bold;
+    color: black;
+    font-size: 89px;
+    position:relative;
+    width:400px;
+    margin:0 auto;
+  }
+  @keyframes noise-anim{
+    $steps:20;
+    @for $i from 0 through $steps{
+      #{percentage($i*(1/$steps))}{
+        clip:rect(random(100)+px,9999px,random(100)+px,0);
+      }
+    }
+  }
+  .sakura_glitch:after{
+    content:attr(data-text);
+    position:absolute;
+    left:2px;
+    text-shadow:1px 0 block;
+    top:0;
+    color:black;
+    background:white;
+    overflow:hidden;
+    clip:rect(0,900px,0,0);
+    animation:noise-anim 2s infinite linear alternate-reverse;
+  }
+
+  @keyframes noise-anim-2{
+    $steps:20;
+    @for $i from 0 through $steps{
+      #{percentage($i*(1/$steps))}{
+        clip:rect(random(100)+px,9999px,random(100)+px,0);
+      }
+    }
+  }
+  .sakura_glitch:before{
+    content:attr(data-text);
+    position:absolute;
+    left:-2px;
+    text-shadow:-3px 0 block;
+    top:0;
+    color:black;
+    background:white;
+    overflow:hidden;
+    clip:rect(0,900px,0,0);
+    animation:noise-anim-2 1s infinite linear alternate-reverse;
+  }
+}

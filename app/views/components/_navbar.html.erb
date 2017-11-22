@@ -1,34 +1,33 @@
 <div class="navbar">
   <div class="left">
     <h2>
-      <div class="glitch_logo" data-text="SAKURA">
-      SAKURA
+      <div class="glitch_logo" data-text="SAKURA">SAKURA
       </div>
     </h2>
     <br>
     <div class="styles_links">
       <% @styles.each do |style| %>
-        <h2>
+        <h3>
           <%= link_to ("#{style.name}"), show_style_path(style) %>
-        </h2>
+        </h3>
       <% end %>
-      <h2><%= link_to 'ver todas', home_path %></h2>
+      <h3><%= link_to 'ver todas', home_path %></h3>
     </div>
   </div>
 
     </div>
   </div>
   <div class="right">
-    <h2>
+    <h3>
       <div class="comprar">
         <%= link_to 'comprar #', home_path %>
       </div>
-    </h2>
+    </h3>
     <div class="socials_links">
       <br>
-      <h2><%= link_to 'contactanos #', home_path %></h2>
-      <h2><%= link_to 'instagram #',  home_path %></h2>
-      <h2><%= link_to 'facebook #', home_path %></h2>
+      <h3><%= link_to 'contactanos #', home_path %></h3>
+      <h3><%= link_to 'instagram #',  home_path %></h3>
+      <h3><%= link_to 'facebook #', home_path %></h3>
     </div>
   </div>
 </div>
