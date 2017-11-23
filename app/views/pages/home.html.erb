@@ -1,5 +1,14 @@
+<div class="container_sakura">
+  <div class="recentre">
+    <img src="assets/SAKURA.png" >
+  </div>
+</div>
+
+
 <div class="title_container">
-  <div class="page_title">COLECCIÒN FW 2017</div>
+  <div class="title">
+    <h1>COLECCIÒN FW 2017</h1>
+  </div>
 </div>
 
 <section class="styles_container">
@@ -7,7 +16,9 @@
     <div class="style" >
       <%= link_to show_style_path(style) do %>
         <div class="style_cover"><%= image_tag style.cover %></div>
-        <div class="style_name"><%= style.name %></div>
+        <h2>
+          <div class="style_name"><%= style.name %></div>
+        </h2>
       <% end %>
     </div>
   <% end %>

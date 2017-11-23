@@ -1,22 +1,107 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 puts 'Cleaning Styles database...'
 Style.destroy_all
 
 puts 'Creating Styles...'
 
-19.times do
-  id = 19
-  Style.create([{name: "SAK X VENUS", cover: "#{[1, 2, 3, 4].sample}.jpg", year: "2017"}])
-  id -= 1
-end
+style_attributes = [
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "1.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "2.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "3.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "4.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "5.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "6.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "7.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "8.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "9.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "10.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "11.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "12.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "13.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "14.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "15.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "16.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "17.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "18.jpg",
+    year:         "2017",
+  },
+  {
+    name:         "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    cover:        "19.jpg",
+    year:         "2017",
+  }
+]
 
+Style.create!(style_attributes)
 puts 'db Styles created!'
 
 puts 'Cleaning photos database...'
@@ -24,113 +109,26 @@ Photo.destroy_all
 
 puts 'Creating Photos...'
 
-30.times do
-  Photo.create([{style_id: [1, 2, 3, 4].sample, description: "SAK X VENUS", image: "#{(1..3).to_a.sample}.jpg"}])
+100.times do
+  Photo.create([{
+    style_id: (1..19).to_a.sample,
+    description: "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+    image: "#{(1..3).to_a.sample}.jpg"}])
 end
 
 puts 'db photos created!'
 
 
-# Style.create!(style_attributes)
-# style_attributes = [
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "1.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "2.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "3.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "4.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "5.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "6.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "7.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "8.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "9.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "10.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "11.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "12.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "13.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "14.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "15.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "16.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "17.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "18.jpg",
-#     year:         "2017",
-#   },
-#   {
-#     name:         "SAK X VENUS",
-#     cover:        "19.jpg",
-#     year:         "2017",
-#   }
-# ]
 
 
+# 19.times do
+#   id = 19
+#   Style.create([{
+#     name: "#{["SACO", "JAQUETA", "FALDA", "VESTIDO"].sample} X #{["SAKU", "VENUS", "SAKU X VENUS"].sample}",
+#     cover: "#{[1, 2, 3, 4].sample}.jpg",
+#     year: "2017"}])
+#   id -= 1
+# end
 
 # Photos_attributes = [
 #   {

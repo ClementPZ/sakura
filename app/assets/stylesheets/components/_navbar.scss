@@ -1,26 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 
 .navbar {
+  z-index: 10;
   position:         fixed;
   display:          flex;
-  align-items:      center;
+  align-items:      flex-start;
   justify-content:  space-between;
   z-index:          2;
-  top:              15px;
+  top:              6px;
   left:             6px;
   width:            99%;
-  height:           100px;
-
-
-
+  h3 {
+    margin: 3px;
+  }
   .left {
     width: 20%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    h2 {
-      margin: 0px;
+    h3 {
       .glitch_logo {
         font-family: futura;
         font-weight: bold;
@@ -84,9 +83,6 @@
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    h3 {
-      margin: -5px;
-    }
     .comprar {
       margin: 0px;
     }
