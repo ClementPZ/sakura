@@ -5,25 +5,56 @@
 </div>
 
 
-<div class="title_container">
-  <div class="title">
-    <h1>COLECCIÒN FW 2017</h1>
+<div class="page">
+  <div class="left">
+    <h3>
+      <div class="glitch_logo" data-text="SAKURA">SAKURA
+      </div>
+    </h3>
+    <br>
+    <div class="styles_links">
+      <% @styles.each do |style| %>
+        <h3>
+          <%= link_to ("#{style.name}"), show_style_path(style) %>
+        </h3>
+      <% end %>
+      <br>
+      <h3><%= link_to 'ver todao', home_path %></h3>
+    </div>
+  </div>
+
+
+  <section class="styles_container">
+
+    <div class="title_container">
+      <div class="title">
+        <h1>COLECCIÒN FW 2017</h1>
+      </div>
+    </div>
+
+    <% @styles.each do |style| %>
+      <div class="style" >
+        <%= link_to show_style_path(style) do %>
+          <div class="style_cover"><%= image_tag style.cover %></div>
+          <h2>
+            <div class="style_name"><%= style.name %></div>
+          </h2>
+        <% end %>
+      </div>
+    <% end %>
+  </section>
+
+  <div class="right">
+    <h3>
+      <div class="comprar">
+        <%= link_to 'comprar #', home_path %>
+      </div>
+    </h3>
+    <br>
+    <div class="socials_links">
+      <h3><%= link_to 'contactanos #', home_path %></h3>
+      <h3><%= link_to 'instagram #',  home_path %></h3>
+      <h3><%= link_to 'facebook #', home_path %></h3>
+    </div>
   </div>
 </div>
-
-
-<section class="styles_container">
-  <% @styles.each do |style| %>
-    <div class="style" >
-      <%= link_to show_style_path(style) do %>
-        <div class="style_cover"><%= image_tag style.cover %></div>
-        <h2>
-          <div class="style_name"><%= style.name %></div>
-        </h2>
-      <% end %>
-    </div>
-  <% end %>
-</section>
-
-
-
