@@ -1,25 +1,59 @@
-<div class="container_sakura">
-  <div class="recentre">
-    <img src="assets/SAKURA.png" >
-  </div>
+<!-- gros sakura or  -->
+<div class="container_sakura_style">
+  <%= image_tag 'SAKURA.png' %>
 </div>
 
+<!-- élement .page contenant les 3 parties : nav_left / main / nav_right -->
 
-<div class="title_container">
-  <div class="title">
-    <h1><%=@style.name%></h1>
-  </div>
-</div>
+<div class="page_style">
 
-
-<div class="styles_container">
-  <div class="styles">
-    <% @photos.each do |photo| %>
-      <%= link_to show_photo_path(photo) do %>
-        <div class="style_cover" >
-          <%= image_tag photo.image %>
-        </div>
+  <div class="left_style">
+    <h3>
+      <div class="glitch_logo" data-text="SAKURA">SAKURA
+      </div>
+    </h3>
+    <br>
+    <div class="styles_links">
+      <% @styles.each do |style| %>
+        <h3>
+          <%= link_to ("#{style.name}"), show_style_path(style) %>
+        </h3>
       <% end %>
-    <% end %>
+      <br>
+      <h3><%= link_to 'ver todos', home_path %></h3>
+    </div>
+  </div>
+
+
+  <section class="style_container">
+    <div class="style_title_container">
+      <div class="style_title">
+        <h1><%=@style.name%></h1>
+      </div>
+    </div>
+    <div>
+      <% @photos.each do |photo| %>
+        <div class="photo"></div>
+          <%= link_to show_photo_path(photo) do %>
+            <div class="photo_image" >
+              <%= image_tag photo.image %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+  </section>
+
+  <div class="right_style">
+    <h3>
+      <div class="comprar">
+        <%= link_to 'comprar #', home_path %>
+      </div>
+    </h3>
+    <br>
+    <div class="socials_links">
+      <h3><%= link_to 'contactanos #', home_path %></h3>
+      <h3><%= link_to 'instagram #',  home_path %></h3>
+      <h3><%= link_to 'facebook #', home_path %></h3>
+    </div>
   </div>
 </div>
