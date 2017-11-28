@@ -3,6 +3,7 @@
 @import "pages/index";
 
 body {
+  cursor: url(cursorBIGCUBE.cur), auto;
   margin: 0px;
   color:            black;
   font-family:      Futura;
@@ -30,7 +31,7 @@ h2 {
 // Liens
 h3 {
   font-size:        15px;
-  margin-top:       0px;
+  margin-top:       5px;
   margin-bottom:    0px;
 }
 // description
@@ -41,3 +42,9 @@ p {
 img {
   max-width:        100%;
 }
+
+a:hover {
+  cursor: url(Pointer.cur), auto;
+}
+
+

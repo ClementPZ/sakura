@@ -16,11 +16,11 @@
     <div class="styles_links">
       <% @styles.each do |style| %>
         <h3>
-          <%= link_to ("#{style.name}"), show_style_path(style) %>
+          <%= link_to ("#{style.name}"), show_style_path(style)%>
         </h3>
       <% end %>
       <br>
-      <h3><%= link_to 'ver todos', home_path %></h3>
+      <h3><%= link_to 'ver todos', home_FW_2017_path %></h3>
     </div>
   </div>
 
@@ -35,7 +35,7 @@
       <% @photos.each do |photo| %>
         <div class="photo"></div>
           <%= link_to show_photo_path(photo) do %>
-            <div class="photo_image" >
+            <div class="photo_image" style="position: relative;z-index: <%= [100, 102].sample %>" >
               <%= image_tag photo.image %>
             </div>
           <% end %>
@@ -46,14 +46,14 @@
   <div class="right_style">
     <h3>
       <div class="comprar">
-        <%= link_to 'comprar #', home_path %>
+        <%= link_to 'comprar #', home_FW_2017_path %>
       </div>
     </h3>
     <br>
     <div class="socials_links">
-      <h3><%= link_to 'contactanos #', home_path %></h3>
-      <h3><%= link_to 'instagram #',  home_path %></h3>
-      <h3><%= link_to 'facebook #', home_path %></h3>
+      <h3><%= link_to 'contactanos #', home_FW_2017_path %></h3>
+      <h3><%= link_to 'instagram #',  home_FW_2017_path %></h3>
+      <h3><%= link_to 'facebook #', home_FW_2017_path %></h3>
     </div>
   </div>
 </div>

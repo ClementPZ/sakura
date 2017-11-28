@@ -1,26 +1,66 @@
+.image_photo_show {
+  cursor: url(cursorCROSS.cur), auto;
+  }
+
 .sakura_show {
   position: fixed;
   margin-top: 6px;
   margin-left: 6px;
+   h3 {
+      .glitch_logo {
+        font-family: futura;
+        font-weight: bold;
+        color: black;
+        font-size:15px;
+        position:relative;
+        width:400px;
+        margin:0 auto;
+        }
+      @keyframes noise-anim{
+        $steps:20;
+        @for $i from 0 through $steps{
+          #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+          }
+        }
+      }
+      .glitch_logo:after{
+        content:attr(data-text);
+        position:absolute;
+        left:2px;
+        text-shadow:2px 0 #8ab6ee;
+        top:0;
+        color:black;
+        // background-color: white;
+        overflow:hidden;
+        clip:rect(0,90px,0,0);
+        animation:noise-anim 1s infinite linear alternate-reverse;
+      }
+      @keyframes noise-anim-2{
+        $steps:10;
+        @for $i from 0 through $steps{
+          #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+          }
+        }
+      }
+      .glitch_logo:before{
+        content:attr(data-text);
+        position:absolute;
+        left:-2px;
+        text-shadow:-2px 0 #8ab6ee;
+        top:0;
+        color:black;
+        // background-color: white;
+        overflow:hidden;
+        clip:rect(0,90px,0,0);
+        animation:noise-anim-2 1s infinite linear alternate-reverse;
+      }
+      a {
+        margin-top: 0px;
+      }
+      a:hover {
+        border-bottom: 2.5px solid black;
+      }
+    }
 }
-
-.container_sakura_photo {
-  position:        fixed;
-  z-index:         101;
-  display:         flex;
-  align-items:     center;
-  justify-content: center;
-  width:           100%;
-  height:          auto;
-  bottom:          -10px;
-  margin-left:     9px;
-  margin-top:      10px;
-  img {
-    opacity:     0.1;
-    width:       100%;
-  }
-}
-
-
-
-

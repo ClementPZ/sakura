@@ -7,10 +7,6 @@ class PagesController < ApplicationController
     @styles = Style.all
   end
 
-  def sakura
-    @styles =Style.all
-  end
-
   def show_style
     @styles = Style.all
     @style = Style.find(params[:id])
@@ -20,5 +16,6 @@ class PagesController < ApplicationController
   def show_photo
     @styles = Style.all
     @photo = Photo.find(params[:id])
+    @style = @photo.style
   end
 end

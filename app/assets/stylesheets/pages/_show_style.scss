@@ -1,6 +1,7 @@
 // @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 
 .container_sakura_style {
+  opacity:         0.3;
   position:        fixed;
   z-index:         101;
   display:         flex;
@@ -12,8 +13,7 @@
   margin-left:     9px;
   margin-top:      10px;
   img {
-    opacity:     0.3;
-    width:       100%;
+    width:         100%;
   }
 }
 
@@ -103,7 +103,7 @@
     .style_title_container {
       width:            100%;
       background-color: white;
-      z-index:          102;
+      z-index:          103;
       position:         sticky;
       top:              0px;
       margin-top:      50px;
@@ -118,7 +118,7 @@
       }
     }
     .photo {
-      margin-top:     63px;
+      margin-top:     125px;
       width:          100%;
       display:        flex;
       align-items:    center;

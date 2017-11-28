@@ -1,11 +1,19 @@
 <!-- gros sakura or  -->
-<div class="container_sakura_photo">
-  <%= image_tag 'SAKURA.png' %>
+<!-- <div class="container_sakura_photo">
+  image_tag SAKURA.png
+</div>
+ -->
+
+
+<div class="sakura_show">
+  <h3>
+    <div class="glitch_logo" data-text="SAKURA">SAKURA
+    </div>
+  </h3>
 </div>
 
-<!-- logo sakura stable -->
-<div class="sakura_show">Sakura</div>
-
-<div class="image_photo_show">
-  <%= image_tag @photo.image %>
-</div>
+<%= link_to show_style_path(@style) do %>
+  <div class="image_photo_show">
+    <%= image_tag @photo.image %>
+  </div>
+<% end %>
