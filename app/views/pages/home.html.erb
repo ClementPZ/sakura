@@ -8,8 +8,10 @@
 <div class="page_styles">
   <div class="left">
     <h3>
-      <div class="glitch_logo" data-text="SAKURA">SAKURA
-      </div>
+      <%= link_to root_path do %>
+        <div class="glitch_logo" data-text="SAKURA">SAKURA
+        </div>
+      <% end %>
     </h3>
     <br>
     <div class="styles_links">
@@ -48,14 +50,15 @@
   <div class="right">
     <h3>
       <div class="comprar">
-        <%= link_to 'comprar #', home_FW_2017_path %>
+        <%= link_to 'comprar #', "https://www.etafashion.com/" %>
       </div>
     </h3>
     <br>
     <div class="socials_links">
-      <h3><%= link_to 'contactanos #', home_FW_2017_path %></h3>
-      <h3><%= link_to 'instagram #',  home_FW_2017_path %></h3>
-      <h3><%= link_to 'facebook #', home_FW_2017_path %></h3>
+      <h3><%= link_to 'contactanos #', "mailto:clementpicardzivy@gmail.com" %></h3>
+      <h3><%= link_to 'instagram #',  "#" %></h3>
+      <h3><%= link_to 'facebook #', "#" %></h3>
+      <h3><%= link_to 'creditos #', "mailto:clementpicardzivy@gmail.com" %></h3>
     </div>
   </div>
 </div>

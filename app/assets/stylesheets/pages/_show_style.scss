@@ -1,7 +1,7 @@
 // @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 
 .container_sakura_style {
-  opacity:         0.3;
+  opacity:         0.1;
   position:        fixed;
   z-index:         101;
   display:         flex;
@@ -118,7 +118,7 @@
       }
     }
     .photo {
-      margin-top:     125px;
+      margin-top:     63px;
       width:          100%;
       display:        flex;
       align-items:    center;
@@ -127,23 +127,33 @@
         position:         relative;
         z-index:          100;
       }
+      h2 {
+        position:         relative;
+        z-index:          102;
+        text-align:       right;
+      }
     }
   }
 
   .right_style {
+    height: 100vh;
     position: sticky; top: 6px;
     margin-right: 6px;
     margin-top: 6px;
     width: 15vw;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex;
+    justify-content: space-between;
     text-align: right;
     a:hover {
       border-bottom: 2.5px solid black;
     }
     .comprar {
       margin: 0px;
+    }
+    .description {
+      margin: 6px;
     }
   }
 }
